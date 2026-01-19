@@ -1,6 +1,6 @@
 import './App.css';
-import Item from './Components/Item';
-importtitle from './Components/Itemdate';
+
+import Products from './Components/Products';
 
 const App=()=> {
   const products =[
@@ -38,7 +38,7 @@ const App=()=> {
   
   return (
     <div>
-      <Products item={products}/>
+      <Products items ={products}/>
    </div>
   );
 }
