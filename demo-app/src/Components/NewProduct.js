@@ -2,10 +2,21 @@ import './NewProduct.css'
 import ProductForm from './ProductForm';
 
 
-function NewProduct(){
+function NewProduct(props){
+
+    function saveProduct(product){
+        console.log("i am inside new product");
+        console.log(product)
+
+        //calling parent function
+        props.pranay(product);
+
+    }
+ 
     return(
         <div className='new-product'>
-            <ProductForm/>
+            {/*prop me function daal diya  */} 
+            <ProductForm onSaveProduct={saveProduct}/>
         </div>
     )
 }

@@ -35,13 +35,19 @@ const App=()=> {
 
    
   ];
+// function banaya
+  function printProductData(data){
+    console.log("i am inside app.js")
+    console.log(data)
+  }
 
-  
+  // pranay prop me function pass kar diya
   return (
     <div>
-      <NewProduct/>
+      
+      <NewProduct pranay={printProductData}/>   
       <Products items ={products}/>
-   </div>
+    </div>
   );
 }
 

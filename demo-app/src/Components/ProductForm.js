@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './ProductForm.css'
 
-function ProductForm(){
+function ProductForm(props){
 
     const[title,setTitle]=useState('');
     const[date,setDate]=useState('');
@@ -15,24 +15,35 @@ function ProductForm(){
 
     function dataChangeHandler(event){
         setDate(event.target.value);
-        console.log("printing");
-        console.log(title);
-        console.log(date);
+        
+    }
+
+    function submitHandler(event){
+        event.preventDefault();
+
+        const productData={
+            title:title,
+            date:date
+        };
+
+        props.onSaveProduct(productData);
+
+        setTitle('');
+        setDate('');
     }
 
 
-
-    return (<form>
+    return (<form onSubmit={submitHandler}>
         <div className='new-product_title'>
             <label>Title</label>
-            <input type='text' onChange={titleChangeHandler}></input>
+            <input type='text' value={title} onChange={titleChangeHandler}></input>
         </div>
         <div className='new-product_date'>
             <label>Date</label>
-            <input type = 'date' min='2023-01-01' max='2023-12-12' onChange={dataChangeHandler}></input>
+            <input type = 'date' value={date} min='2023-01-01' max='2023-12-12' onChange={dataChangeHandler}></input>
         </div>
         <div className='new-product_button'>
-            <button type = 'submit'>Add Product</button>
+            <button type = 'submit' >Add Product</button>
         </div>
     </form>)
 
