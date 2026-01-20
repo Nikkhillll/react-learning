@@ -1,4 +1,5 @@
 import './App.css';
+import NewProduct from './Components/NewProduct';
 
 import Products from './Components/Products';
 
@@ -38,6 +39,7 @@ const App=()=> {
   
   return (
     <div>
+      <NewProduct/>
       <Products items ={products}/>
    </div>
   );
