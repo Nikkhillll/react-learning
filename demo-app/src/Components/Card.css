@@ -1,0 +1,23 @@
+/* Layout helper for products list (kept for compatibility) */
+.products{
+		display: flex;
+		justify-content:center;
+}
+
+/* Generic card wrapper used by many components */
+.card{
+	background: #af2424;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+	padding: 1rem;
+	margin: 0.75rem;
+}
+
+/* When a card receives a component-specific class (e.g. product-item), allow tighter layout */
+.card.product-item{
+	display:flex;
+	align-items:center;
+	gap: 1rem;
+	max-width: 640px;
+}
+

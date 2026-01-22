@@ -1,0 +1,37 @@
+.product-item{
+     display:flex;
+     align-items: center;
+     gap: 1rem;
+     max-width: 640px;
+     margin: 0 auto;
+}
+
+.product-item_discription{
+     display: flex;
+     
+     justify-content: center;
+     width: 100%;
+     gap: 0.5rem;
+}
+
+.product-item_discription h2{
+     margin: 0;
+     font-size: 1.25rem;
+     color: #222;
+}
+
+.product-item_discription button{
+     display:inline-block;
+     padding: 0.45rem 0.9rem;
+     background: #ff6f61;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 600;
+     transition: background-color 150ms ease;
+}
+
+.product-item_discription button:hover{
+     background: #ff4c3b;
+}

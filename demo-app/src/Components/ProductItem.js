@@ -17,9 +17,9 @@ const ProductItem=(props)=>{
   }
 
     return(
-        <Card className='product-item0'>
+        <Card className='product-item'>
           <ProductDate date={props.date}/>
-          <div className='product-itme_discription'>
+          <div className='product-item_discription'>
             <h2>{title}</h2>
             <button onClick={clickHandler}>Add to Cart</button>
           </div>
